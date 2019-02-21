@@ -10,7 +10,7 @@ $(document).on('turbolinks:load', function() {
     search_list.append(html);
   }
 
-  function appendNoUserName(fail_comment) {
+  function appendErrorMessage(fail_comment) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${fail_comment}</p>
                 </div>`
@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function() {
           });
         }
         else {
-          appendNoUserName("一致する名前はありません");
+          appendErrorMessage("一致する名前はありません");
         }
       })
       .fail(function() {
