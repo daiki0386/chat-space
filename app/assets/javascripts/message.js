@@ -58,8 +58,8 @@ $(function(){
         data: {id: message_id},
         dataType: "json"
       })
-      .done(function(data) {
-        data.forEach(function(message) {
+      .done(function(new_messages) {
+        new_messages.forEach(function(message) {
           var html = buildHTML(message);
           $('.messages').append(html);
           $(".messages").animate({scrollTop:$('.messages')[0].scrollHeight});
