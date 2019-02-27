@@ -11,7 +11,7 @@ class Group < ApplicationRecord
     # else
     #   'まだメッセージはありません。'
     # end
-    latest_messages = content.last
-    latest_messages.present? ? latest_messages.content : '投稿はありません'
+    latest_messages = messages.content.last
+    latest_messages.present? ? latest_messages : '投稿はありません'
   end
 end
